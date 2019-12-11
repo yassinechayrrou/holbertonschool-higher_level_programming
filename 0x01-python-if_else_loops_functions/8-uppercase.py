@@ -4,4 +4,5 @@ def uppercase(str):
     for c in range(len(convert)):
         if (ord(convert[i]) > 96 and ord(convert[i]) < 123):
             convert[i] = chr(ord(convert[i]) - 32)
-    print("{}".format(("").join(convert)))
+            print("{:s}".format(convert[i]), end="")
+    print("")
