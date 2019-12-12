@@ -5,4 +5,4 @@ if __name__ == "__main__":
         sum = 0
         for count in range(1, argc):
             sum =+ int(argv[count])
-        print(sum)
+        print("{:d}".format(sum))
