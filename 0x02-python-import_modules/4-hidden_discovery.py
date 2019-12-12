@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-    argc = len(argv)
-    i = 0
-    for j in range(1, argc):
-        i += int(argv[j])
-    print("{:d}".format(i))
+    import hidden_4
+    directory_arr = dir(hidden_4)
+    ignore = "__"
+    for i in range(0, len(directory_arr)):
+        if directory_arr[i] != ignore:
+            print(directory_arr[i])
