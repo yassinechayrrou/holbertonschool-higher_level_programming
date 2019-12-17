@@ -4,5 +4,5 @@ def multiple_returns(sentence):
     if sentence:
         return tup
     else:
-        tup = (0, None)
+        tup = (len(sentence), None)
         return tup
