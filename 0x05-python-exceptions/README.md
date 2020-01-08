@@ -1,1 +1,1 @@
-python exceptions
+python static and exception handling
