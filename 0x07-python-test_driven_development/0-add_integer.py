@@ -16,6 +16,4 @@ def add_integer(a, b=98):
     elif (isinstance(b, int) or isinstance(b, float)) is False:
         raise TypeError("b must be an integer")
     else:
-        a = int(a)
-        b = int(b)
-        return int(a + b)
+        return int(a) + int(b)
