@@ -1,0 +1,24 @@
+Matrix_divided module
+=====================
+
+Matrix_devided test series
+--------------------------
+
+
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+testing function:
+
+    >>> mat = [[2, 4.5, 6]]
+    >>> matrix_divided(mat, 2)
+    [[1, 2.25, 3]]
+
+    >>> mat = [[2, 3, 4], [5, 6, 7], [5, 6, 22]]
+    >>> matrix_divided(mat, 3)
+    [[0.67, 1.0, 1.33], [1.67, 2.0, 2.33], [1.67, 2.0, 7.33]]
+
+    >>> mat = [[2, 4.5, 6]]
+    >>> matrix_divided(mat, 2)
+    [[1, 2.25, 3]]
+
+

@@ -1,0 +1,18 @@
+Print sorted list module
+========================
+
+importing and testing
+---------------------
+
+    >>>MyList = __import__("1-my_list").MyList
+
+
+Testing function:
+
+    >>>list = MyList()
+    >>>list
+    []
+
+    >>>list.append(655)
+    [655]
+
