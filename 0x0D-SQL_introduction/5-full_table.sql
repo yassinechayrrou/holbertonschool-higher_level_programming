@@ -1,2 +1,2 @@
 -- Full table description
-DESC first_table;
+SHOW COLUMNS FROM first_table;
