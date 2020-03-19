@@ -12,9 +12,9 @@ int check_cycle(listint_t *list)
 	if (list == NULL || list->next == NULL)
 		return (0);
 	s_pointer = list;
-	f_pointer = list->next->next;
+	f_pointer = list->next;
 
-	while (f_pointer != NULL)
+	while (f_pointer && f_pointer->next && s_pointer)
 	{
 		if (s_pointer == f_pointer)
 		{
