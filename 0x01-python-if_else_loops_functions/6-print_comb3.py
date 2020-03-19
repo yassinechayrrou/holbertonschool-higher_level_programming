@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-for n in range(9):
-    for m in range(n + 1, 10):
+for n in range(10):
+    for m in range(10):
         if n != 8 and m != 9:
+            if n != m and n < m:
                 print("{:d}{:d}, ".format(n, m), end="")
-print("{:d}{:d}".format(8, 9))
+print("89")
