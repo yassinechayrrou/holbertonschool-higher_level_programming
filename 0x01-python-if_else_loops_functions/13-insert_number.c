@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
   *insert_node - inserts new node into sorted LL at proper order
   *@head: pointer to head node of linked list
@@ -49,4 +47,5 @@ listint_t *insert_node(listint_t **head, int number)
 			return (newNode);
 		}
 	}
+	return (NULL);
 }
