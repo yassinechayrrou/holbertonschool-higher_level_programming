@@ -3,8 +3,7 @@ def remove_char_at(str, n):
     if n > len(str) or n < 0:
         return str
     newstr = ""
-    i = 0
-    for i in range(len(str)): 
+    for i in range(len(str)):
         if i != n:
             newstr = newstr + str[i]
     return newstr
