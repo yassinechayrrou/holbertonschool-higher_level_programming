@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("""SELECT id, name
                       From states
-                      WHERE name REGEXP '^[N].*'
+                      WHERE name REGEXP '^[N].*$'
                       ORDER BY id ASC""")
 # Used REGEXP instead of 'N%' due to it not passing the check but it's the same
     states = cursor.fetchall()
