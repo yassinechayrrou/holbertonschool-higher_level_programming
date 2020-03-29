@@ -12,8 +12,7 @@ if __name__ == "__main__":
                       From states
                       WHERE LEFT (name, 1) = 'N'
                       ORDER BY id ASC""")
-# Used REGEXP instead of 'N%' due to it not passing the check but it's the same
     states = cursor.fetchall()
     for i in states:
-        print(i)
+        print(i if i[1][0] == 'N' else False)
     db.close()
