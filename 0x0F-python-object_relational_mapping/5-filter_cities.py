@@ -20,4 +20,5 @@ if __name__ == "__main__":
             print(i[0])
         else:
             print("{}, ".format(i[0]), end="")
+    cursor.close()
     db.close()
