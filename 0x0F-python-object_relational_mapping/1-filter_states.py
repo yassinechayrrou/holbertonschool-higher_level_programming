@@ -10,10 +10,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("""SELECT id, name
                       From states
-                      WHERE LEFT (name, 1) = 'N'
+                      WHERE name REGEX BINARY '^[N]'
                       ORDER BY id ASC""")
     states = cursor.fetchall()
     for i in states:
-        if i[1][0] == 'N':
-            print(i)
+        print(i)
     db.close()
