@@ -14,8 +14,10 @@ if __name__ == "__main__":
                  ORDER BY cities.id ASC"""
     cursor.execute(command, {'injection': argv[4]})
     cities = cursor.fetchall()
-    for i in range(len(cities) - 1):
-       print("{}, ".format(cities[i][0]), end="")
-    print(cities[len(cities) - 1][0])
+    for i in cities:
+        if i != cities[len(cities) - 1]:
+            print(i[0] ,", ", end="")
+        else:
+            print(i[0])
     cursor.close()
     db.close()
