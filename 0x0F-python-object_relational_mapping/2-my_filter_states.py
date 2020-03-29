@@ -10,10 +10,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("""SELECT id, name
                       From states
-                      WHERE name='{}'
+                      WHERE name REGEXP '{}'
                       ORDER BY id ASC""".format(argv[4]))
     states = cursor.fetchall()
     for i in states:
-        if i[1] == argv[4]:
-                print(i)
+        print(i)
     db.close()
