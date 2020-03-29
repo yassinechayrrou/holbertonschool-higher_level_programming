@@ -10,8 +10,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
     command = """SELECT cities.name From states
                  INNER JOIN cities ON states.id = cities.state_id
-                 WHERE states.name = %s"""
-    cursor.execute(command, (argv[4], ))
+                 WHERE states.name=%(injection)s
+                 ORDER BY cities.id ASC"""
+    cursor.execute(command, {'injection': argv[4]})
     cities = cursor.fetchall()
     for i in range(len(cities) - 1):
        print("{}, ".format(cities[i][0]), end="")
