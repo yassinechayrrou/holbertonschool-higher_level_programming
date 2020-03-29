@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cursor.execute("""SELECT id, name
                       From states
                       WHERE name LIKE 'N%'
-                      ORDER BY id ASC""")
+                      ORDER BY id ASC;""")
     states = cursor.fetchall()
     for i in states:
         print(i)
