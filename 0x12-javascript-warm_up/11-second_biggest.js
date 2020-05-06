@@ -11,7 +11,9 @@ if (argc < 4) {
     if (!isNaN(elem)) {
       arr = arr.concat(elem);
     }
-    arr = arr.sort();
+    arr = arr.sort(function (a, b) {
+      return a - b;
+    });
   }
   console.log(arr[arr.length - 2]);
 }
