@@ -8,6 +8,10 @@ request.get('https://swapi-api.hbtn.io/api/films/' + parseInt(process.argv[2]), 
     console.log(err);
   } else {
     object = JSON.parse(body);
-    console.log(object['title']);
+    if (object.title === undefined) {
+      process.stdout.write('');
+    } else {
+      console.log(object.title);
+    }
   }
 });
