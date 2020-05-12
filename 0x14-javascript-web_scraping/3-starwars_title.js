@@ -2,19 +2,10 @@
 
 const request = require('request');
 const ep = parseInt(process.argv[2]);
-let object;
-if (ep < 7 && ep > 0) {
-  const URL = 'https://swapi-api.hbtn.io/api/films/' + ep;
-  request.get(URL, function (err, res, body) {
-    if (err) {
-      console.log(err);
-    } else {
-      object = JSON.parse(body);
-      if (object.title === undefined) {
-        process.stdout.write('');
-      } else {
-        console.log(object.title);
-      }
-    }
-  });
-}
+const URL = 'https://swapi-api.hbtn.io/api/films/' + ep;
+request(URL, function (err, res, body) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(JSON.parse(body).title);
+});
