@@ -1,16 +1,13 @@
 #!/usr/bin/node
 
-const library = require('./101-data.js');
+const dict = require('./101-data.js').dict;
 
-const vals = Object.values(library.dict);
-let unique = [...new Set(vals)];
-console.log(unique);
-let larousse = {};
+const larousse = {};
 
-for (let i = 0; i < unique.length; i++) {
-  let keys = Object.keys(library.dict).filter(function(key) {
-    return library.dict[key] === unique[i]
-  });
-  larousse[unique[i]] = keys;
+for (const key in dict) {
+  if (larousse[dict[key]] === undefined) {
+    larousse[dict[key]] = [];
+  }
+  larousse[dict[key]].push(key);
 }
 console.log(larousse);
