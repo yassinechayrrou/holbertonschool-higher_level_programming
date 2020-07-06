@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Module that fetches URL"""
+"""Module that fetches URL
+"""
 
 import requests
 
-
 if __name__ == "__main__":
-    URL = "https://intranet.hbtn.io/status"
-    req = requests.get(URL)
+    url = "https://intranet.hbtn.io/status"
+    req = requests.get(url)
     print("Body response:")
     print('\t-type: {}'.format(type(req.text)))
-    print('\t-content: {}'.format(req.text))
+    print('\t-content: {}'.format(req.text), end="")
