@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+""" Module that takes URL and an email Sends Post req
+    to URL with mail as param and display response body
+"""
 import urllib.request
 import urllib.parse
 import sys
