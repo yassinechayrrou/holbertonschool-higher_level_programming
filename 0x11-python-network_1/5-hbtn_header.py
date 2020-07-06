@@ -4,7 +4,6 @@
 
 import requests
 import sys
-import pprint
 
 
 if __name__ == "__main__":
