@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""python script that sends request to URL and displays X-Request-Id value in the header of the response
+"""python script that sends request to URL and displays
+   X-Request-Id value in the header of the response
 """
 import urllib.request
 import sys
